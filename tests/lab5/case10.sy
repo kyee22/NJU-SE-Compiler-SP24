@@ -1,0 +1,11 @@
+int g;
+void foo() {
+    if (g > 0)
+        return;
+    return;
+}
+
+int main(){
+    foo();
+    return g;
+}

@@ -1,0 +1,29 @@
+int gg;
+
+int false() {
+    gg = gg + 1;
+    return 0;
+}
+
+int true() {
+    gg = gg + 1;
+    return 1;
+}
+
+int main() {
+    int x;
+    int y;
+    if (true() && false()) {
+        x = 1;
+    } else {
+        x = 2;
+    }
+
+    if (false() || true()) {
+        y = 1;
+    } else {
+        y = 2;
+    }
+
+    return x * 100 + y * 10 + gg;
+}

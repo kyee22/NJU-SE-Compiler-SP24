@@ -1,0 +1,99 @@
+int array[10];               // 数组声明
+int multiArray[5][5];        // 多维数组声明
+int x;                       // 整型变量声明
+
+// 函数定义
+int foo() {
+    return 10;
+}
+
+int foo2(int x, int y) {
+    return x + y;
+}
+
+void testInvalidTypes() {
+    // 算术运算中的类型错误
+    x = array + 5;           // 错误：数组与整数相加
+    x = multiArray * 2;      // 错误：多维数组与整数相乘
+    x = foo - array;         // 错误：函数与数组相减
+    x = foo2 * foo;          // 错误：函数与函数相乘
+    x = foo2(3, 4) / multiArray; // 错误：函数调用结果与数组相除
+
+    // 条件表达式中的类型错误
+    if (array) {
+        x = 1;
+    }
+
+    if (foo) {
+        x = 1;
+    }
+
+    while (multiArray) {
+        x= x-1;
+    }
+
+    while (foo2) {
+        x=x-1;
+    }
+
+    // 函数返回值中的类型错误
+    x = foo();
+    x = array;               // 错误：数组赋值给整型变量
+    x = multiArray;          // 错误：多维数组赋值给整型变量
+    x = foo2(3, 4);          // 正确
+    x = foo2;                // 错误：函数赋值给整型变量
+
+    // 数组作为参数传递的类型错误
+    foo2(array, 5);          // 错误：数组类型传递给整型参数
+    foo2(3, multiArray);     // 错误：多维数组类型传递给整型参数
+
+    // 函数作为参数传递的类型错误
+    foo2(foo, 5);            // 错误：函数类型传递给整型参数
+    foo2(3, foo2);           // 错误：函数类型传递给整型参数
+
+    // 逻辑运算中的类型错误
+    if (foo && 1) {          // 错误：逻辑与运算中的函数类型
+        x = 1;
+    }
+
+    if (array || 0) {        // 错误：逻辑或运算中的数组类型
+        x = 0;
+    }
+
+    x = !multiArray;         // 错误：逻辑非运算中的多维数组类型
+    x = foo2 + foo;         // 错误：逻辑与运算中的函数类型
+    x = foo2 + array;       // 错误：逻辑或运算中的函数与数组类型
+
+    // 比较运算中的类型错误
+    if (array == multiArray) {  // 错误：数组与多维数组比较
+        x = 1;
+    }
+
+    if (foo != foo2) {          // 错误：函数类型比较
+        x = 0;
+    }
+
+    if (array < foo) {          // 错误：数组与函数比较
+        x = -1;
+    }
+
+    // 嵌套表达式中的类型错误
+    x = (foo + array) * (multiArray / foo2); // 错误：嵌套的算术运算中类型不匹配
+    x = (foo2(foo, array) - multiArray) / (foo + foo2); // 错误：嵌套的函数调用和数组运算中类型不匹配
+
+    // 函数调用中的类型错误
+    x = foo2(foo2(3, 4), array[0]); // 错误：函数调用返回值与数组元素作为参数
+    x = foo2(foo(), foo2);          // 错误：函数调用与函数作为参数
+    x = foo2(multiArray[0][0], foo2); // 错误：多维数组元素与函数作为参数
+
+    // 复杂条件表达式中的类型错误
+    if (foo2 == multiArray || foo && array) {  // 错误：条件表达式中包含多种类型不匹配的操作
+        x = 1;
+    }
+}
+
+int main() {
+    testInvalidTypes();
+
+    return 0;
+}

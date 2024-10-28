@@ -1,0 +1,26 @@
+int b(){
+    return 0;
+}
+int main() {
+    int a = b;//wrong
+    int c[20][20][20][20];
+    int w;
+    int m = b[1];//wrong
+    int n[20][20] = c[1][1];
+    int p[20] = c[1][1];//wrong
+    int q[1][2] = n;
+    w=n[0][0];
+
+    int z[3] = {1,2,3};
+    int zz[3][3] = {{1,2,3}, {1,2,3}, {1,2,3}};
+    int zzz[3][3] = {1,2,3};
+
+    a=b;//wrong
+    const int cc=b;//wrong
+
+    const int z_d_3[2][2][3] = c[19];
+    const int _[2][2] = {{1}, {2}};
+
+    int mnn[3] = {b(), b(), b()};
+    int nnm = b() + 9 * b();
+}

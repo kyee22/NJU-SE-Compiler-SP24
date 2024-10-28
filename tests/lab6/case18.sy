@@ -1,0 +1,8 @@
+int B = 10;
+
+int main(){
+    int A = 1;
+    int B = 2; // local variable with the same name as global variable
+
+    return (A + B) + (B-A) + (B-A-A);
+}

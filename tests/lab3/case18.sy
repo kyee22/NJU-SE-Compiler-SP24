@@ -1,0 +1,30 @@
+int g;
+
+int foo(int a, int a, int a, int a, int a) {
+    return 3;
+}
+
+int foo;
+
+int bar() {
+    return g;
+}
+
+int main() {
+    int a = bar;
+    const int b = bar;
+    int c;
+    c = bar;
+
+    int m = 2;
+    int m;
+    const int m;
+
+    {
+        const int m = 5;
+    }
+
+    int d = foo(1);
+    int e = foo;
+    int g = foo(m);
+}

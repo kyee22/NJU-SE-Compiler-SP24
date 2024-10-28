@@ -1,0 +1,46 @@
+// 全局常量和变量
+const int CONST_1 = 10;
+const int CONST_2 = 20;
+const int CONST_3 = 30;
+const int CONST_4 = 40;
+
+int globalVar1 = 5;
+int globalVar2 = 15;
+int globalVar3 = 25;
+int globalVar4 = 35;
+int globalVar5 = 45;
+
+// main 函数
+int main() {
+    // 局部变量
+    int localVar1 = 2;
+    int localVar2 = 4;
+    int localVar3 = 6;
+    int localVar4 = 8;
+    int localVar5 = 0;
+    int localVar6 = 1;
+    int localVar7 = 0;
+    int localVar8 = 0;
+
+    // 复杂的局部变量运算
+    localVar5 = (localVar1 + localVar2) * localVar3;
+    localVar6 = localVar4 - localVar5;
+
+    // 使用全局变量进行运算
+    int temp1 = globalVar1 * CONST_1;
+    int temp2 = globalVar2 + CONST_2;
+    int temp3 = temp1 - temp2;
+
+    // 计算进一步的结果
+    localVar7 = temp3 * localVar6;
+    localVar8 = localVar7 + CONST_3;
+
+    // 再次运算，涉及到更多变量和常量
+    int intermediateResult1 = globalVar3 - localVar5;
+    int intermediateResult2 = intermediateResult1 * globalVar4;
+    int intermediateResult3 = intermediateResult2 / CONST_4;
+    int finalResult = intermediateResult3 + globalVar5;
+
+    // 返回计算结果
+    return finalResult;//expect 36
+}

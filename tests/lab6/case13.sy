@@ -1,0 +1,58 @@
+
+// Global variables (with potential same names as local variables)
+int a = 10, b = 20, c = 30, d = 40, e = 50;
+int f = 60, g = 70, h = 80, i = 90, j = 100;
+int k = 110, l = 120, m = 130, n = 140, o = 150;
+int p = 160, q = 170, r = 180, s = 190, t = 200;
+int u = 210, v = 220, w = 230, x = 240, y = 250;
+int z = 260, aa = 270, bb = 280, cc = 290, dd = 300;
+
+
+int main() {
+
+    // Global variable operations
+    int globalSum = a + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + w + x + y + z + aa + bb + cc + dd;
+
+    // Local variables (same names as global variables to test shadowing)
+    int a = 1, b = 2, c = 3, d = 4, e = 5;
+    int f = 6, g = 7, h = 8, i = 9, j = 10;
+    int k = 11, l = 12, m = 13, n = 14, o = 15;
+    int p = 16, q = 17, r = 18, s = 19, t = 20;
+    int u = 21, v = 22, w = 23, x = 24, y = 25;
+    int z = 26, aa = 27, bb = 28, cc = 29, dd = 30;
+
+    // Local variable operations with same names as global
+    int localSum = a + b - c * d;
+    int temp1 = e / f + g - h;
+    int temp2 = i * j - k + l;
+    int temp3 = m / (n + o);
+    int temp4 = p - (q * r);
+    int temp5 = s + t - u;
+    int temp6 = v * w + x;
+    int temp7 = (y - z) / (aa + bb);
+    int temp8 = cc * (dd - a) + b;
+    int temp9 = (c + d) * e - f;
+    int temp10 = g + (h * i) - j;
+
+    // More complex operations
+    int complex1 = temp1 * temp2 - temp3;
+    int complex2 = (temp4 + temp5) / (temp6 - temp7);
+    int complex3 = (temp8 * temp9) + temp10;
+    int complex4 = (complex1 + complex2) - complex3;
+    int complex5 = complex4 * (temp1 / temp2);
+
+    // Testing variable shadowing
+    int shadowTest1 = a + b + (c * d) - e;
+    int shadowTest2 = f / g + (h - i);
+    int shadowTest3 = j * (k - l) / m;
+    int shadowTest4 = n + (o * p) - q;
+    int shadowTest5 = r - (s / t) + u;
+
+    // Final result combining all variables
+    int result = globalSum + localSum + temp1 + temp2 + temp3 + temp4 + temp5 + temp6 + temp7 + temp8 + temp9 + temp10
+                 + complex1 + complex2 + complex3 + complex4 + complex5
+                 + shadowTest1 + shadowTest2 + shadowTest3 + shadowTest4 + shadowTest5;
+
+
+    return result;
+}

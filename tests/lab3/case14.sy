@@ -1,0 +1,19 @@
+int d(int a, int a) { //wrong
+    return;
+}
+
+int b() {
+    return 1;
+}
+
+int b() {
+    return;
+}
+
+int c() {
+    return;
+}
+
+int main() {
+    int c = d(1,1);
+}

@@ -1,0 +1,25 @@
+// 全局常量定义
+const int gConst = 10;
+
+// 全局变量定义
+int gVar = 20;
+
+int main() {
+    // 局部常量定义
+    const int localConst = 30;
+
+    // 局部变量定义
+    int localVar = 40;
+
+    // 局部变量之间的赋值
+    int anotherVar = localVar;
+
+    // 变量参与表达式运算
+    int sum = localVar + localConst;
+
+    // 使用全局变量和常量
+    int total = gVar + gConst + sum;
+
+    // 返回一个局部变量的值
+    return total;
+}

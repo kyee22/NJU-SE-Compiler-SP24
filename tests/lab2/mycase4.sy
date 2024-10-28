@@ -1,0 +1,46 @@
+int main() {
+    if (a == b)
+        if (3)
+            c = 0;
+
+    if (a == b)
+        c = 0;
+    if (a < b)
+        return 3;
+    if (a < b) {
+        return 3;
+    }
+    else
+        x = xxx;
+    if (a < b) {
+        if (a < c) {
+            return 3;
+        }
+        else {
+            ;
+        }
+    } else {
+        x = x;
+    }
+
+    if (a != b) {
+        c = a;
+    }
+    else if (1) {
+        ;
+    }
+    else {
+        ;
+    }
+    {
+        x = 22;
+    }
+
+    while (3)
+        ;
+
+    while (4)
+        if (5)
+            ;
+
+}

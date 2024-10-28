@@ -1,0 +1,37 @@
+
+// Global variables
+int g1 = 1, g2 = 2, g3 = 3, g4 = 4, g5 = 5;
+int g6 = 6, g7 = 7, g8 = 8, g9 = 9, g10 = 10;
+int g11 = 11, g12 = 12, g13 = 13, g14 = 14, g15 = 15;
+int g16 = 16, g17 = 17, g18 = 18, g19 = 19, g20 = 20;
+
+int main() {
+    // Local variables
+    int l1 = 1, l2 = 2, l3 = 3, l4 = 4, l5 = 5;
+    int l6 = 6, l7 = 7, l8 = 8, l9 = 9, l10 = 10;
+    int l11 = 11, l12 = 12, l13 = 13, l14 = 14, l15 = 15;
+    int l16 = 16, l17 = 17, l18 = 18, l19 = 19, l20 = 20;
+
+    // Reuse global variables in local calculations
+    l1 = g1 + g2 - g3 * g4;  // Operations involving global variables
+    l2 = g5 / g6 + g7 - g8;  // Operations involving global variables
+    l3 = g9 * g10 - g11 + g12;  // Operations involving global variables
+    l4 = g13 / (g14 + g15);  // Operations involving global variables
+    l5 = g16 - (g17 * g18);  // Operations involving global variables
+
+    // More operations with reused variables
+    l1 = l1 + l2 - l3;  // Reuse l1, l2, l3
+    l4 = l4 * l5;  // Reuse l4, l5
+    l5 = l1 / (l2 + l3);  // Reuse l1, l2, l3
+
+    // Reuse more variables
+    l6 = l7 + l8 - l9;  // Reusing local l7, l8, l9
+    l10 = l11 * l12 + l13;  // Reusing local l11, l12, l13
+    l14 = (l15 + l16) * (l17 - l18);  // Reusing local l15, l16, l17, l18
+    l19 = l20 - l6;  // Reusing local l20, l6
+
+    // Final operations with all reused variables
+    int result = l1 + l2 + l3 + l4 + l5 + l6 + l10 + l14 + l19;
+
+    return result;
+}

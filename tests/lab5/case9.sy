@@ -1,0 +1,24 @@
+
+int g = 1;
+
+void foo() {
+    if (g > 0)
+        g = g + 1;
+}
+
+void t() {
+    g = g + 1;
+    return;
+}
+
+int bar() {
+    if (g > 0)
+        g = g + 1;
+    return g;
+}
+
+int main(){
+    foo();
+    t();
+    return bar();
+}

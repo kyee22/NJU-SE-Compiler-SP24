@@ -1,0 +1,69 @@
+int func1(int x, int y, int z) {
+  if (z == 0) {
+    return x +  y;
+  } else if (y > z) {
+    return func1(x, y - z, 0);
+  } else {
+    return y + z;
+  }
+}
+
+int func2(int x, int y) {
+  if (y) {
+    return func2(x % y, 0);
+  } else {
+    return x;
+  }
+}
+
+int func3(int x, int y) {
+  if (y == 0) {
+    return x + 1;
+  } else {
+    return func3(x + y, 0);
+  }
+}
+
+int func4(int x, int y, int z) {
+  if (x) {
+    return y;
+  } else {
+    return z;
+  }
+}
+
+int func5(int x) {
+  if (x < 0)
+    return -x;
+  return x;
+}
+
+int func6(int x, int y) {
+  if (x && y) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+int func7(int x) {
+  if (!x) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+int main() {
+  int i1 = 1, i2 = 2, i3 = 3, i4 = 4;
+  int v1 = 4, v2 = 5, v3 = 6, v4 = 7;
+
+  int result = func1(
+      func2(func3(func4(func6(func7(i1), func7(i2)), v1, v2), v3), v4),
+      func5(func3(v1, v2)),
+      func7(func2(v3, i4))
+  );
+    //int result = func2(func3(func4(func6(func7(i1), func7(i2)), v1, v2), v3), v4);
+   // int result = func2(func3(func4(func6(func7(i1), func7(i2)), v1, v2), v3), v4);
+  return result;
+}

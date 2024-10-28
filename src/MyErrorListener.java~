@@ -1,0 +1,33 @@
+import org.antlr.v4.runtime.BaseErrorListener;
+import org.antlr.v4.runtime.RecognitionException;
+import org.antlr.v4.runtime.Recognizer;
+import java.util.ArrayList;
+
+public class MyErrorListener extends BaseErrorListener {
+    private boolean hasError;
+    private ArrayList<String> errorInfo;
+
+    public MyErrorListener() {
+        super();
+        this.hasError = false;
+        this.errorInfo = new ArrayList<>();
+    }
+
+
+    @Override
+    public void syntaxError(Recognizer<?, ?> recognizer, Object offendingSymbol,
+                            int line, int charPositionInLine, String msg, RecognitionException e) {
+        hasError = true;
+        errorInfo.add("Error type A at Line " + line + ": " + msg + ".");
+    }
+
+    public boolean hasError() {
+        return hasError;
+    }
+
+    public void printErrorInfo() {
+        for (String s : errorInfo) {
+            System.err.println(s);
+        }
+    }
+}

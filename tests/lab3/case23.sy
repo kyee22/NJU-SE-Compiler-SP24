@@ -1,0 +1,35 @@
+int g[10] = {};
+int h[10][10][10];
+
+int foo1() {
+    int foo1 = g[1];
+    return foo1;
+}
+
+int foo2() {
+    int foo2[10] = g;
+    return foo2[1];
+}
+
+
+int bar1(int bar1) {
+    return bar1;
+}
+
+int bar2(int bar2[]) {
+    return bar2[1];
+}
+
+
+int get(int x) {
+    if (x == 0) {
+        return 1;
+    }
+    if (x <= 3) {
+        return get(x-1);
+    }
+
+    int get[10][10] = h[1];
+    return get[1][1];
+}
+

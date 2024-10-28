@@ -1,0 +1,9 @@
+int main(){
+    int a = 0;//rename a into d
+    int b = a;//rename a into d
+    {
+        int a = 1;//not target
+        int c = a;//not target
+    }
+    return 0;
+}

@@ -1,0 +1,18 @@
+void func(int x){}
+int main(){
+int a = func(1) + 1;//error
+int arr1[2][3];
+arr1[1][arr1] = arr1[1][arr1] + 1;//error
+int arr[2];
+arr[arr + a] = 1;//error
+int b = a + arr;//error
+int c = func(1);//error
+if(arr1[1] < 1){//error
+}else if(!arr){//error
+}else if(arr1[1] > 1){//error
+}
+/*
+    1.没有return
+    2.logic binary
+    3.int x=...(匹配?)
+*/

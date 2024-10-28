@@ -1,0 +1,28 @@
+const int A = 5;
+const int B = 10;
+const int C = 15;
+const int D = 20;
+
+int globalVar1 = 100;
+int globalVar2 = 200;
+
+int main() {
+    int localVar1 = A;
+    int localVar2 = B;
+    int localVar3 = C;
+    int localVar4 = D;
+
+    int temp1 = localVar1 + localVar2; // temp1 = 5 + 10 = 15
+    int temp2 = localVar3 - localVar4; // temp2 = 15 - 20 = -5
+    int temp3 = temp1 * temp2;         // temp3 = 15 * (-5) = -75
+    int temp4 = temp3 / 5;             // temp4 = -75 / 5 = -15
+
+    localVar1 = temp4;                 // localVar1 = -15
+    localVar2 = localVar1 + globalVar1; // localVar2 = -15 + 100 = 85
+    localVar3 = localVar2 - globalVar2; // localVar3 = 85 - 200 = -115
+    localVar4 = localVar3 * 2;         // localVar4 = -115 * 2 = -230
+
+    int finalResult = localVar4 + 255; // finalResult = -230 + 255 = 25
+
+    return finalResult;                // return 25
+}

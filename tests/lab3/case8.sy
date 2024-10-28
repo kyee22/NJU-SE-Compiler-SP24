@@ -1,0 +1,49 @@
+int f(int a, int b, int c) {
+    return a;
+}
+
+int g(int a, int b) {
+    int x[100][1000];
+    int y;
+    if (a > 0) {
+        return x[1][1];
+    } else {
+        return y + b + y * b / a;
+    }
+}
+
+int g1(int a, int b) {
+    int x[100][1000];
+    int y;
+    if (a > 0) {
+        return x[1];
+    } else {
+        return y;
+    }
+}
+
+int g2(int a, int b) {
+    int x[100][1000];
+    int y;
+    if (a > 0) {
+        return x[1][1];
+    } else {
+        return y[1];
+    }
+}
+
+int main() {
+    int a[10];
+    int b[10][10][10];
+    int c;
+    f(1);
+    f(a);
+    f(a[1]);
+    f(a[1][1]);
+    f(a[1], b[1][1 + c][1], c); // correct
+    f(a[1], b[1][1][d], c);
+    f(a[1], b[1][1][1], c[1]);
+    f(a[1][1], b[1][1][1], c);
+    f(a[1], b[1][1], c);
+    f(a[1], b[1], c);
+}

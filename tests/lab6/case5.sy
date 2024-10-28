@@ -1,0 +1,8 @@
+int ax = 10;
+int ay = 20;
+int az = 5;
+
+int main() {
+int result = ax * (ay - az) / (az + 1) % (ax - ay);
+return result; // 输出为5
+}

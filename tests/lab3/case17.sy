@@ -1,0 +1,19 @@
+int foo(int a, int a[]) {
+    return a;
+}
+int main(int nju) {
+    int buaa = nju;
+    int _ = 1;
+    int a = foo(_);
+
+    // int a, b, c;
+    int d = a, e = b, f = c;
+    int x = a, b = y, z = c;
+    const int u = a, v = b, w = c, g = c, h = c;
+    const int u_ = a, v_ = a, w_ = a, _ = a, e_ = a;
+
+    int r, s, t;
+    r = a;
+    s = b;
+    t = c;
+}

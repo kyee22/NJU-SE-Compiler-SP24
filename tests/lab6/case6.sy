@@ -1,0 +1,10 @@
+int u = 25;
+int v = 5;
+int w = 4;
+int x = 6;
+int y = 3;
+
+int main() {
+int result = ((u / v) * w + x) - y * (u % v);
+return result; // ((25 / 5) * 4 + 6) - 3 * (25 % 5) = 26
+}
